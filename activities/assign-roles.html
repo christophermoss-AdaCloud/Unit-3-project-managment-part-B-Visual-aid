@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Project Roles - Activity</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="container">
+        <header>
+            <h1>👥 Activity: Assign Project Roles</h1>
+        </header>
+
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="../index.html">🏠 Home</a></li>
+                <li><a href="project-brief.html">📝 Project Brief</a></li>
+                <li><a href="assign-roles.html">👥 Assign Roles</a></li>
+                <li><a href="gantt-chart.html">📊 Gantt Chart</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-content">
+            <section class="info-box">
+                <h2>What You'll Do</h2>
+                <p style="font-size: 1.2rem;">
+                    Match team members to the right roles based on their skills and experience. 
+                    Choose wisely - the right person in the right role is key to success!
+                </p>
+            </section>
+
+            <section class="highlight">
+                <h2>📖 Instructions</h2>
+                <ol style="font-size: 1.1rem;">
+                    <li>Read about each team member and their skills</li>
+                    <li>Look at the roles that need filling</li>
+                    <li>Drag and drop each person to the role that fits them best</li>
+                    <li>Click "Check My Answers" to see how you did</li>
+                </ol>
+            </section>
+
+            <section class="visual-aid">
+                <h2>🎯 Scenario</h2>
+                <p style="font-size: 1.1rem;">
+                    You're building a <strong>Mobile App for a Local Library</strong>. 
+                    You need to assign the right people to each role. Read their profiles carefully!
+                </p>
+            </section>
+
+            <section>
+                <h2>Team Members Available</h2>
+                <div id="team-members" class="interactive-area">
+                    <div class="draggable" draggable="true" data-person="sarah" id="person-sarah">
+                        <strong>Sarah</strong><br>
+                        Skills: 5 years coding, knows app development, organized
+                    </div>
+                    <div class="draggable" draggable="true" data-person="james" id="person-james">
+                        <strong>James</strong><br>
+                        Skills: Great at art, created many app designs, creative
+                    </div>
+                    <div class="draggable" draggable="true" data-person="maria" id="person-maria">
+                        <strong>Maria</strong><br>
+                        Skills: Good at finding bugs, detail-oriented, patient
+                    </div>
+                    <div class="draggable" draggable="true" data-person="david" id="person-david">
+                        <strong>David</strong><br>
+                        Skills: Led 3 projects before, good communicator, problem solver
+                    </div>
+                    <div class="draggable" draggable="true" data-person="emma" id="person-emma">
+                        <strong>Emma</strong><br>
+                        Skills: Writes great instructions, works at library, knows what users need
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Roles to Fill</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>🎯 Project Manager</h3>
+                        <p style="font-size: 1rem;">
+                            Needs: Leadership, organization, communication skills
+                        </p>
+                        <div class="dropzone" data-role="manager" id="drop-manager">
+                            Drop person here
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>💻 App Developer</h3>
+                        <p style="font-size: 1rem;">
+                            Needs: Coding skills, technical knowledge
+                        </p>
+                        <div class="dropzone" data-role="developer" id="drop-developer">
+                            Drop person here
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>🎨 UI/UX Designer</h3>
+                        <p style="font-size: 1rem;">
+                            Needs: Design skills, creativity, visual thinking
+                        </p>
+                        <div class="dropzone" data-role="designer" id="drop-designer">
+                            Drop person here
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>🔍 Quality Tester</h3>
+                        <p style="font-size: 1rem;">
+                            Needs: Attention to detail, patience, thoroughness
+                        </p>
+                        <div class="dropzone" data-role="tester" id="drop-tester">
+                            Drop person here
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>📝 Content Writer</h3>
+                        <p style="font-size: 1rem;">
+                            Needs: Writing skills, understanding of users
+                        </p>
+                        <div class="dropzone" data-role="writer" id="drop-writer">
+                            Drop person here
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section style="text-align: center; margin: 2rem 0;">
+                <button class="btn btn-primary" onclick="checkRoles()">✅ Check My Answers</button>
+                <button class="btn btn-secondary" onclick="resetRoles()">🔄 Reset</button>
+            </section>
+
+            <section id="feedback" class="success-box" style="display: none;">
+                <h2>📊 Results</h2>
+                <div id="feedback-content"></div>
+            </section>
+
+            <section class="info-box">
+                <h2>💡 Tips for Assigning Roles</h2>
+                <ul style="font-size: 1.1rem;">
+                    <li><strong>Match Skills:</strong> Put people in roles that use their strengths</li>
+                    <li><strong>Consider Experience:</strong> Someone who's led projects before is good for Project Manager</li>
+                    <li><strong>Think About Personality:</strong> Detail-oriented people are great testers</li>
+                    <li><strong>Communication Matters:</strong> The Project Manager needs to be a good communicator</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>What's Next?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+                    Excellent! Now try creating a Gantt Chart to plan your project timeline!
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                    <a href="gantt-chart.html" class="btn btn-primary">Next: Gantt Chart →</a>
+                    <a href="project-brief.html" class="btn btn-secondary">← Previous: Project Brief</a>
+                </div>
+            </section>
+        </main>
+
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border-color); text-align: center; color: #6b7280;">
+            <p>Activity 2 of 3</p>
+        </footer>
+    </div>
+
+    <script src="../js/activities.js"></script>
+</body>
+</html>

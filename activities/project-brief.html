@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Project Brief - Activity</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="container">
+        <header>
+            <h1>📝 Activity: Create a Project Brief</h1>
+        </header>
+
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="../index.html">🏠 Home</a></li>
+                <li><a href="project-brief.html">📝 Project Brief</a></li>
+                <li><a href="assign-roles.html">👥 Assign Roles</a></li>
+                <li><a href="gantt-chart.html">📊 Gantt Chart</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-content">
+            <section class="info-box">
+                <h2>What You'll Do</h2>
+                <p style="font-size: 1.2rem;">
+                    Create your own Project Brief for a school event. Fill in all the important 
+                    information that a project manager needs to know!
+                </p>
+            </section>
+
+            <section class="highlight">
+                <h2>📖 Instructions</h2>
+                <ol style="font-size: 1.1rem;">
+                    <li>Read the scenario below</li>
+                    <li>Fill in the form to create your Project Brief</li>
+                    <li>Click "Review My Brief" to see your completed brief</li>
+                    <li>You can save or print your brief when done</li>
+                </ol>
+            </section>
+
+            <section class="visual-aid">
+                <h2>🎯 Scenario</h2>
+                <p style="font-size: 1.1rem;">
+                    <strong>Your Task:</strong> You need to plan a <strong>School Talent Show</strong> 
+                    that will happen in 8 weeks. The show will be in the school hall and will include 
+                    singing, dancing, and comedy acts from students.
+                </p>
+            </section>
+
+            <section class="card">
+                <h2>Create Your Project Brief</h2>
+                <form id="project-brief-form">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="project-name">Project Name:</label>
+                        <input type="text" id="project-name" name="project-name" 
+                               placeholder="e.g., Spring Talent Show 2024">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="project-goal">Project Goal (What do you want to achieve?):</label>
+                        <textarea id="project-goal" name="project-goal" rows="3" 
+                                  placeholder="e.g., To showcase student talents and raise money for charity"></textarea>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="project-timeline">Timeline (How long will it take?):</label>
+                        <input type="text" id="project-timeline" name="project-timeline" 
+                               placeholder="e.g., 8 weeks from planning to show day">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="project-budget">Budget (How much money do you have?):</label>
+                        <input type="text" id="project-budget" name="project-budget" 
+                               placeholder="e.g., £500 for decorations, sound system, and prizes">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="team-members">Team Members (Who will help?):</label>
+                        <textarea id="team-members" name="team-members" rows="3" 
+                                  placeholder="e.g., Project Manager, Stage Manager, 2 Marketing Students, Sound Technician"></textarea>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="key-tasks">Key Tasks (What needs to be done?):</label>
+                        <textarea id="key-tasks" name="key-tasks" rows="4" 
+                                  placeholder="e.g., Audition performers, Book hall, Set up sound system, Promote event"></textarea>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="success-criteria">Success Criteria (How will you know it worked?):</label>
+                        <textarea id="success-criteria" name="success-criteria" rows="3" 
+                                  placeholder="e.g., At least 10 acts perform, 100+ audience members, Positive feedback"></textarea>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="risks">Potential Risks (What could go wrong?):</label>
+                        <textarea id="risks" name="risks" rows="3" 
+                                  placeholder="e.g., Not enough performers sign up, Sound equipment breaks, Low ticket sales"></textarea>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="reviewBrief()">
+                        📋 Review My Brief
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="clearForm()">
+                        🔄 Start Over
+                    </button>
+                </form>
+            </section>
+
+            <section id="brief-output" class="success-box" style="display: none;">
+                <h2>✅ Your Completed Project Brief</h2>
+                <div id="brief-content" style="font-size: 1.1rem;"></div>
+                <div style="margin-top: 1.5rem;">
+                    <button class="btn btn-accent" onclick="window.print()">🖨️ Print Brief</button>
+                    <button class="btn btn-secondary" onclick="editBrief()">✏️ Edit Brief</button>
+                </div>
+            </section>
+
+            <section class="info-box">
+                <h2>💡 Tips for a Great Project Brief</h2>
+                <ul style="font-size: 1.1rem;">
+                    <li><strong>Be Specific:</strong> Don't just say "plan event" - say what type of event and when</li>
+                    <li><strong>Be Realistic:</strong> Make sure your goals match your time and budget</li>
+                    <li><strong>Think Ahead:</strong> Consider what could go wrong and how to prevent it</li>
+                    <li><strong>Be Clear:</strong> Anyone reading your brief should understand the project</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>What's Next?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+                    Great job! Now try assigning roles to your project team!
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                    <a href="assign-roles.html" class="btn btn-primary">Next: Assign Roles →</a>
+                    <a href="../index.html" class="btn btn-secondary">← Back to Home</a>
+                </div>
+            </section>
+        </main>
+
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border-color); text-align: center; color: #6b7280;">
+            <p>Activity 1 of 3</p>
+        </footer>
+    </div>
+
+    <script src="../js/activities.js"></script>
+</body>
+</html>
