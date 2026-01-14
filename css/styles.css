@@ -1,0 +1,413 @@
+/* SEN-Friendly Styles for Project Management Learning Site */
+
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #10b981;
+    --accent-color: #f59e0b;
+    --text-color: #1f2937;
+    --bg-color: #f9fafb;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    --warning-color: #f59e0b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+
+/* Large, readable headings */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+    color: var(--secondary-color);
+}
+
+/* Container for content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+.nav {
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.nav a:hover,
+.nav a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    outline: 3px solid white;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #1d4ed8;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #059669;
+    transform: scale(1.05);
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+    background-color: #d97706;
+    transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+    background-color: var(--card-bg);
+    border: 3px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Visual aids */
+.visual-aid {
+    background-color: #eff6ff;
+    border: 3px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.visual-aid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Highlight boxes */
+.highlight {
+    background-color: #fef3c7;
+    border-left: 5px solid var(--accent-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+}
+
+.info-box {
+    background-color: #dbeafe;
+    border-left: 5px solid var(--primary-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+}
+
+.success-box {
+    background-color: #d1fae5;
+    border-left: 5px solid var(--success-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.75rem;
+}
+
+/* Interactive elements */
+.interactive-area {
+    background-color: #f3f4f6;
+    border: 2px dashed var(--primary-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    min-height: 200px;
+}
+
+.draggable {
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 0.5rem;
+    cursor: move;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.draggable:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropzone {
+    background-color: #f9fafb;
+    border: 3px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    min-height: 100px;
+    transition: all 0.3s ease;
+}
+
+.dropzone.active {
+    border-color: var(--primary-color);
+    background-color: #eff6ff;
+}
+
+.dropzone.filled {
+    border-color: var(--success-color);
+    background-color: #d1fae5;
+}
+
+/* Forms */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Quiz styles */
+.quiz-question {
+    background-color: var(--card-bg);
+    border: 3px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.quiz-options {
+    list-style: none;
+    margin-left: 0;
+}
+
+.quiz-option {
+    background-color: #f3f4f6;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quiz-option:hover {
+    background-color: #e5e7eb;
+    border-color: var(--primary-color);
+}
+
+.quiz-option.selected {
+    background-color: #dbeafe;
+    border-color: var(--primary-color);
+    border-width: 3px;
+}
+
+.quiz-option.correct {
+    background-color: #d1fae5;
+    border-color: var(--success-color);
+}
+
+.quiz-option.incorrect {
+    background-color: #fee2e2;
+    border-color: var(--error-color);
+}
+
+/* Glossary */
+.glossary-term {
+    margin-bottom: 2rem;
+}
+
+.glossary-term dt {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.glossary-term dd {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--secondary-color);
+}
+
+/* Accessibility features */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print styles */
+@media print {
+    .nav,
+    .btn {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .container {
+        box-shadow: none;
+    }
+}

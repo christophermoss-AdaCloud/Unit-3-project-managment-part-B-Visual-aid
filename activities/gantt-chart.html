@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt Chart Builder - Activity</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="container">
+        <header>
+            <h1>📊 Activity: Build a Gantt Chart</h1>
+        </header>
+
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="../index.html">🏠 Home</a></li>
+                <li><a href="project-brief.html">📝 Project Brief</a></li>
+                <li><a href="assign-roles.html">👥 Assign Roles</a></li>
+                <li><a href="gantt-chart.html">📊 Gantt Chart</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-content">
+            <section class="info-box">
+                <h2>What You'll Do</h2>
+                <p style="font-size: 1.2rem;">
+                    Create a simple Gantt Chart by putting tasks in the right order on a timeline. 
+                    Remember: some tasks must happen before others!
+                </p>
+            </section>
+
+            <section class="highlight">
+                <h2>📖 Instructions</h2>
+                <ol style="font-size: 1.1rem;">
+                    <li>Read about the project scenario</li>
+                    <li>Look at the tasks that need to be done</li>
+                    <li>Drag each task to the correct week on the timeline</li>
+                    <li>Think about which tasks must finish before others can start</li>
+                    <li>Click "Check My Timeline" to see if you got it right</li>
+                </ol>
+            </section>
+
+            <section class="visual-aid">
+                <h2>🎯 Scenario</h2>
+                <p style="font-size: 1.1rem;">
+                    You're creating a <strong>School Magazine</strong>. The project must be completed 
+                    in 8 weeks. You need to put the tasks in the right order!
+                </p>
+            </section>
+
+            <section>
+                <h2>Tasks to Schedule</h2>
+                <div id="tasks-list" class="interactive-area">
+                    <div class="draggable" draggable="true" data-task="plan" data-correct-week="1" id="task-plan">
+                        <strong>Plan Content</strong><br>
+                        <small>Decide what articles to write (1 week)</small>
+                    </div>
+                    <div class="draggable" draggable="true" data-task="write" data-correct-week="2" id="task-write">
+                        <strong>Write Articles</strong><br>
+                        <small>Create all the content (3 weeks)</small>
+                    </div>
+                    <div class="draggable" draggable="true" data-task="photos" data-correct-week="2" id="task-photos">
+                        <strong>Take Photos</strong><br>
+                        <small>Get images for articles (2 weeks)</small>
+                    </div>
+                    <div class="draggable" draggable="true" data-task="design" data-correct-week="5" id="task-design">
+                        <strong>Design Layout</strong><br>
+                        <small>Arrange text and photos (2 weeks)</small>
+                    </div>
+                    <div class="draggable" draggable="true" data-task="review" data-correct-week="7" id="task-review">
+                        <strong>Review & Edit</strong><br>
+                        <small>Check for mistakes (1 week)</small>
+                    </div>
+                    <div class="draggable" draggable="true" data-task="print" data-correct-week="8" id="task-print">
+                        <strong>Print & Distribute</strong><br>
+                        <small>Print magazines and hand out (1 week)</small>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Gantt Chart Timeline</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+                    Drag tasks from above into the correct weeks below:
+                </p>
+                
+                <div class="card" style="overflow-x: auto;">
+                    <div style="display: grid; grid-template-columns: repeat(8, 1fr); gap: 0.5rem; min-width: 800px;">
+                        <div style="text-align: center; font-weight: bold; padding: 0.5rem; background: #e5e7eb;">Week 1</div>
+                        <div style="text-align: center; font-weight: bold; padding: 0.5rem; background: #e5e7eb;">Week 2</div>
+                        <div style="text-align: center; font-weight: bold; padding: 0.5rem; background: #e5e7eb;">Week 3</div>
+                        <div style="text-align: center; font-weight: bold; padding: 0.5rem; background: #e5e7eb;">Week 4</div>
+                        <div style="text-align: center; font-weight: bold; padding: 0.5rem; background: #e5e7eb;">Week 5</div>
+                        <div style="text-align: center; font-weight: bold; padding: 0.5rem; background: #e5e7eb;">Week 6</div>
+                        <div style="text-align: center; font-weight: bold; padding: 0.5rem; background: #e5e7eb;">Week 7</div>
+                        <div style="text-align: center; font-weight: bold; padding: 0.5rem; background: #e5e7eb;">Week 8</div>
+                        
+                        <div class="dropzone" data-week="1" id="week-1">Drop here</div>
+                        <div class="dropzone" data-week="2" id="week-2">Drop here</div>
+                        <div class="dropzone" data-week="3" id="week-3">Drop here</div>
+                        <div class="dropzone" data-week="4" id="week-4">Drop here</div>
+                        <div class="dropzone" data-week="5" id="week-5">Drop here</div>
+                        <div class="dropzone" data-week="6" id="week-6">Drop here</div>
+                        <div class="dropzone" data-week="7" id="week-7">Drop here</div>
+                        <div class="dropzone" data-week="8" id="week-8">Drop here</div>
+                    </div>
+                </div>
+            </section>
+
+            <section style="text-align: center; margin: 2rem 0;">
+                <button class="btn btn-primary" onclick="checkGantt()">✅ Check My Timeline</button>
+                <button class="btn btn-secondary" onclick="resetGantt()">🔄 Reset</button>
+                <button class="btn btn-accent" onclick="showHint()">💡 Show Hint</button>
+            </section>
+
+            <section id="gantt-feedback" class="success-box" style="display: none;">
+                <h2>📊 Results</h2>
+                <div id="gantt-feedback-content"></div>
+            </section>
+
+            <section id="hint" class="info-box" style="display: none;">
+                <h2>💡 Hints</h2>
+                <ul style="font-size: 1.1rem;">
+                    <li>You must plan BEFORE you can write articles</li>
+                    <li>Articles and photos can happen at the same time (parallel tasks)</li>
+                    <li>You can't design the layout until articles and photos are ready</li>
+                    <li>Reviewing happens after design is complete</li>
+                    <li>Printing is the very last task</li>
+                </ul>
+            </section>
+
+            <section class="visual-aid">
+                <h2>📚 Understanding Gantt Charts</h2>
+                <div style="font-size: 1.1rem;">
+                    <p><strong>Key Concepts:</strong></p>
+                    <ul>
+                        <li><strong>Sequential Tasks:</strong> Must happen one after another (like Plan → Write → Design)</li>
+                        <li><strong>Parallel Tasks:</strong> Can happen at the same time (like Write + Photos)</li>
+                        <li><strong>Dependencies:</strong> Task B can't start until Task A finishes</li>
+                        <li><strong>Timeline:</strong> Shows when each task should start and end</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="info-box">
+                <h2>💡 Real-World Gantt Charts</h2>
+                <p style="font-size: 1.1rem;">
+                    In real projects, Gantt Charts are much more detailed and can show:
+                </p>
+                <ul style="font-size: 1.1rem;">
+                    <li>Who is responsible for each task</li>
+                    <li>How long each task takes (duration)</li>
+                    <li>Which tasks are critical (must be done on time)</li>
+                    <li>Resource allocation (people, equipment, budget)</li>
+                    <li>Progress tracking (how much is complete)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>What's Next?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+                    Great work! You've completed all the activities. Ready to test your knowledge with a quiz?
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                    <a href="../assessment/quiz.html" class="btn btn-primary">Take the Quiz →</a>
+                    <a href="assign-roles.html" class="btn btn-secondary">← Previous: Assign Roles</a>
+                </div>
+            </section>
+        </main>
+
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border-color); text-align: center; color: #6b7280;">
+            <p>Activity 3 of 3</p>
+        </footer>
+    </div>
+
+    <script src="../js/activities.js"></script>
+</body>
+</html>

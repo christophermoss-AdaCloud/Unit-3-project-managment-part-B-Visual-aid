@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection Activity</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="container">
+        <header>
+            <h1>💭 Reflection Activity</h1>
+        </header>
+
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="../index.html">🏠 Home</a></li>
+                <li><a href="../concepts/what-is-pm.html">📚 Concepts</a></li>
+                <li><a href="../activities/project-brief.html">🎮 Activities</a></li>
+                <li><a href="quiz.html">✅ Quiz</a></li>
+                <li><a href="reflection.html">💭 Reflection</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-content">
+            <section class="info-box">
+                <h2>Think About What You've Learned</h2>
+                <p style="font-size: 1.2rem;">
+                    Reflection helps you understand what you've learned and how you can use it. 
+                    Take your time with these questions!
+                </p>
+            </section>
+
+            <section class="card">
+                <h2>Reflection Questions</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                    Answer these questions about your learning journey. You can write your answers 
+                    here or discuss them with your teacher or classmates.
+                </p>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color);">1. What I Learned</h3>
+                    <p style="font-size: 1.1rem;">What are the three most important things you learned about project management?</p>
+                    <textarea id="learned" rows="4" style="width: 100%; padding: 1rem; font-size: 1rem; border: 2px solid var(--border-color); border-radius: 6px;"></textarea>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color);">2. What Surprised Me</h3>
+                    <p style="font-size: 1.1rem;">Was there anything that surprised you or that you didn't expect to learn?</p>
+                    <textarea id="surprised" rows="4" style="width: 100%; padding: 1rem; font-size: 1rem; border: 2px solid var(--border-color); border-radius: 6px;"></textarea>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color);">3. Real-Life Connections</h3>
+                    <p style="font-size: 1.1rem;">Think of a real project (at school, home, or in your community). How could you use project management skills for it?</p>
+                    <textarea id="reallife" rows="4" style="width: 100%; padding: 1rem; font-size: 1rem; border: 2px solid var(--border-color); border-radius: 6px;"></textarea>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color);">4. Skills I Developed</h3>
+                    <p style="font-size: 1.1rem;">What new skills did you develop? (e.g., planning, organizing, problem-solving)</p>
+                    <textarea id="skills" rows="4" style="width: 100%; padding: 1rem; font-size: 1rem; border: 2px solid var(--border-color); border-radius: 6px;"></textarea>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color);">5. What I Found Challenging</h3>
+                    <p style="font-size: 1.1rem;">What parts of project management did you find difficult? How did you overcome these challenges?</p>
+                    <textarea id="challenging" rows="4" style="width: 100%; padding: 1rem; font-size: 1rem; border: 2px solid var(--border-color); border-radius: 6px;"></textarea>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color);">6. My Favorite Activity</h3>
+                    <p style="font-size: 1.1rem;">Which activity did you enjoy the most? Why?</p>
+                    <textarea id="favorite" rows="4" style="width: 100%; padding: 1rem; font-size: 1rem; border: 2px solid var(--border-color); border-radius: 6px;"></textarea>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-color);">7. Future Goals</h3>
+                    <p style="font-size: 1.1rem;">How will you use what you've learned in the future?</p>
+                    <textarea id="future" rows="4" style="width: 100%; padding: 1rem; font-size: 1rem; border: 2px solid var(--border-color); border-radius: 6px;"></textarea>
+                </div>
+
+                <button class="btn btn-primary" onclick="saveReflection()">💾 Save My Reflections</button>
+                <button class="btn btn-accent" onclick="window.print()">🖨️ Print Reflections</button>
+            </section>
+
+            <section class="visual-aid">
+                <h2>Self-Assessment Checklist</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+                    Check off the skills and knowledge you feel confident about:
+                </p>
+                <div style="font-size: 1.1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem;">
+                        <input type="checkbox" style="width: auto; margin-right: 0.5rem;">
+                        I can explain what project management is
+                    </label>
+                    <label style="display: block; margin-bottom: 0.5rem;">
+                        <input type="checkbox" style="width: auto; margin-right: 0.5rem;">
+                        I understand why planning is important
+                    </label>
+                    <label style="display: block; margin-bottom: 0.5rem;">
+                        <input type="checkbox" style="width: auto; margin-right: 0.5rem;">
+                        I can name different project roles
+                    </label>
+                    <label style="display: block; margin-bottom: 0.5rem;">
+                        <input type="checkbox" style="width: auto; margin-right: 0.5rem;">
+                        I know what a Gantt Chart is and how to use it
+                    </label>
+                    <label style="display: block; margin-bottom: 0.5rem;">
+                        <input type="checkbox" style="width: auto; margin-right: 0.5rem;">
+                        I can create a Project Brief
+                    </label>
+                    <label style="display: block; margin-bottom: 0.5rem;">
+                        <input type="checkbox" style="width: auto; margin-right: 0.5rem;">
+                        I understand task dependencies
+                    </label>
+                    <label style="display: block; margin-bottom: 0.5rem;">
+                        <input type="checkbox" style="width: auto; margin-right: 0.5rem;">
+                        I can match people to appropriate roles
+                    </label>
+                    <label style="display: block; margin-bottom: 0.5rem;">
+                        <input type="checkbox" style="width: auto; margin-right: 0.5rem;">
+                        I know what stakeholders are
+                    </label>
+                    <label style="display: block; margin-bottom: 0.5rem;">
+                        <input type="checkbox" style="width: auto; margin-right: 0.5rem;">
+                        I can use project management vocabulary correctly
+                    </label>
+                    <label style="display: block; margin-bottom: 0.5rem;">
+                        <input type="checkbox" style="width: auto; margin-right: 0.5rem;">
+                        I feel confident applying these skills to real projects
+                    </label>
+                </div>
+            </section>
+
+            <section class="highlight">
+                <h2>💡 Tips for Good Reflection</h2>
+                <ul style="font-size: 1.1rem;">
+                    <li><strong>Be Honest:</strong> There are no wrong answers - just share your real thoughts</li>
+                    <li><strong>Be Specific:</strong> Give examples when you can</li>
+                    <li><strong>Think Deeply:</strong> Don't rush - take time to really think about each question</li>
+                    <li><strong>Look Forward:</strong> Think about how you'll use what you've learned</li>
+                </ul>
+            </section>
+
+            <section class="success-box">
+                <h2>🎉 Congratulations!</h2>
+                <p style="font-size: 1.2rem;">
+                    You've completed the Project Management Learning Hub! You should be proud of what you've accomplished.
+                </p>
+                <p style="font-size: 1.1rem; margin-top: 1rem;">
+                    Keep practicing these skills, and remember - good project management can help you succeed 
+                    in school, work, and life!
+                </p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="../index.html" class="btn btn-primary">Return to Home</a>
+                    <a href="quiz.html" class="btn btn-secondary">Retake Quiz</a>
+                </div>
+            </section>
+        </main>
+
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border-color); text-align: center; color: #6b7280;">
+            <p>Reflection and Self-Assessment</p>
+        </footer>
+    </div>
+
+    <script>
+        function saveReflection() {
+            alert('Your reflections have been saved to your browser. You can print them or discuss them with your teacher!');
+            
+            // Save to localStorage
+            const reflections = {
+                learned: document.getElementById('learned').value,
+                surprised: document.getElementById('surprised').value,
+                reallife: document.getElementById('reallife').value,
+                skills: document.getElementById('skills').value,
+                challenging: document.getElementById('challenging').value,
+                favorite: document.getElementById('favorite').value,
+                future: document.getElementById('future').value
+            };
+            
+            localStorage.setItem('projectManagementReflections', JSON.stringify(reflections));
+        }
+        
+        // Load saved reflections if they exist
+        window.addEventListener('load', function() {
+            const saved = localStorage.getItem('projectManagementReflections');
+            if (saved) {
+                const reflections = JSON.parse(saved);
+                document.getElementById('learned').value = reflections.learned || '';
+                document.getElementById('surprised').value = reflections.surprised || '';
+                document.getElementById('reallife').value = reflections.reallife || '';
+                document.getElementById('skills').value = reflections.skills || '';
+                document.getElementById('challenging').value = reflections.challenging || '';
+                document.getElementById('favorite').value = reflections.favorite || '';
+                document.getElementById('future').value = reflections.future || '';
+            }
+        });
+    </script>
+</body>
+</html>
