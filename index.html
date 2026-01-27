@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered visual aids and educational resources for Unit 3 Project Management Part B, leveraging LLM agents for personalized learning">
+    <title>Unit 3 Project Management - AI-Powered Visual Aid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 50px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #764ba2;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .intro {
+            font-size: 1.1em;
+            color: #555;
+            text-align: center;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .cta-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            text-align: center;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Unit 3 Project Management Part B</h1>
+        <p class="intro">AI-Powered Visual Aid & Educational Resources</p>
+
+        <p>Welcome to the AI-enhanced visual aid repository for Unit 3 Project Management Part B. Leveraging insights from cutting-edge research in LLM agents for education, this resource provides intelligent, adaptive visual aids that help students and professionals understand key project management principles through personalized learning experiences.</p>
+
+        <h2>AI-Powered Educational Approach</h2>
+        <p>This project incorporates research on <strong>LLM Agents for Education</strong> (Chu et al., 2026), featuring:</p>
+        <ul>
+            <li><strong>Pedagogical Agents:</strong> Automating complex pedagogical tasks to support learners</li>
+            <li><strong>Domain-Specific Agents:</strong> Tailored learning experiences for project management</li>
+            <li><strong>Adaptive Learning:</strong> Personalized content delivery based on individual needs</li>
+        </ul>
+
+        <h2>Key Topics Covered</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>📊 Planning & Scheduling</h3>
+                <p>AI-guided project planning techniques with adaptive scheduling methodologies.</p>
+            </div>
+            <div class="feature-card">
+                <h3>👥 Resource Management</h3>
+                <p>Intelligent resource allocation with AI-powered optimization recommendations.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚠️ Risk Assessment</h3>
+                <p>Smart risk identification and mitigation with LLM-enhanced analysis.</p>
+            </div>
+            <div class="feature-card">
+                <h3>💬 Team Collaboration</h3>
+                <p>AI-supported communication and collaboration tools for project success.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📈 Progress Tracking</h3>
+                <p>Intelligent progress monitoring with personalized reporting insights.</p>
+            </div>
+            <div class="feature-card">
+                <h3>✅ Quality Assurance</h3>
+                <p>AI-enhanced quality control with automated validation measures.</p>
+            </div>
+        </div>
+
+        <h2>Purpose</h2>
+        <p>This project serves as a comprehensive AI-enhanced educational resource, providing:</p>
+        <ul>
+            <li><strong>Visual Diagrams:</strong> AI-generated charts, graphs, and flowcharts tailored to learning needs</li>
+            <li><strong>Interactive Content:</strong> Adaptive materials powered by LLM technology</li>
+            <li><strong>Best Practices:</strong> Intelligent recommendations based on industry standards</li>
+            <li><strong>Educational Resources:</strong> Personalized guides and documentation</li>
+            <li><strong>Intelligent Tutoring:</strong> Automated pedagogical support for all learners</li>
+        </ul>
+
+        <h2>How to Use</h2>
+        <p>The AI-enhanced visual aids in this repository can be used for:</p>
+        <ul>
+            <li>Educational purposes - Personalized learning with adaptive content</li>
+            <li>Teaching materials - Intelligent tutoring systems for classroom instruction</li>
+            <li>Reference guides - AI-powered insights on project management methodologies</li>
+            <li>Professional development - Tailored learning experiences for skill enhancement</li>
+            <li>Research - Exploring applications of LLM agents in educational domains</li>
+        </ul>
+
+        <div class="cta-section">
+            <h2>Get Started</h2>
+            <p>Explore the repository to access all visual aids and resources.</p>
+            <a href="https://github.com/christophermoss-AdaCloud/Unit-3-project-managment-part-B-Visual-aid" class="btn">View Repository</a>
+            <a href="https://github.com/christophermoss-AdaCloud/Unit-3-project-managment-part-B-Visual-aid/blob/main/README.md" class="btn">Read Documentation</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Unit 3 Project Management Visual Aid | AI-Powered Educational Resource</p>
+            <p>Informed by research in LLM Agents for Education (Chu et al., 2026)</p>
+            <p>Built with ❤️ for personalized project management education</p>
+        </footer>
+    </div>
+</body>
+</html>
